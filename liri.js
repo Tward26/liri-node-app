@@ -1,10 +1,16 @@
+//node.js required packages
 const dotenv = require("dotenv").config();
 const Spotify = require('node-spotify-api');
 const keys = require("./keys.js");
 const spotify = new Spotify(keys.spotify);
 const inquirer = require('inquirer');
 const axios = require("axios");
+const moment = require('moment');
+const fs = require("fs");
 
+//to do still - spotify, do whatit says, append files to log
+
+//Main App functionality using inquirer
 console.log("Welcome to LIRI, how can I help you?\n")
 inquirer.prompt([
     {
@@ -15,12 +21,15 @@ inquirer.prompt([
     },
     {
         type: "input",
-        message: "What would you like to search?",
+        message: "What would you like to search for?",
         name: "choice"
     }
 ]).then(res => {
     switch (res.command) {
         case 'concert-this':
+            if (res.choice === "") {
+                res.choice = "baroness";
+            }
             concertThis(res.choice);
             break;
         case 'spotify-this-song':
@@ -39,19 +48,22 @@ inquirer.prompt([
     }
 });
 
+//Bands in town axios call
+
 const concertThis = choice => {
-    // const choiceArray = choice.split(" ");
-    // const choiceString = choiceArray.join('+');
-    const queryUrl = "https://rest.bandsintown.com/artists/" + choice + "/events?app_id=codingbootcamp";
+    const choiceArray = choice.split(" ");
+    const choiceString = choiceArray.join('+');
+    const queryUrl = "https://rest.bandsintown.com/artists/" + choiceString + "/events?app_id=codingbootcamp";
 
     axios.get(queryUrl)
         .then(function (response) {
-          const data = response.data;
-          data.forEach(ele => {
-              console.log("Venue Name: " + ele.venue.name);
-              console.log("Venue Location: " + ele.venue.city + ", " + ele.venue.region + ", " + ele.venue.country);
-              console.log("Date: " + ele.datetime +"\n");
-          });
+            const data = response.data;
+            data.forEach(ele => {
+                console.log("\nVenue Name: " + ele.venue.name);
+                console.log("Venue Location: " + ele.venue.city + ", " + ele.venue.region + ", " + ele.venue.country);
+                const momentDate = moment(ele.datetime);
+                console.log("Date: " + momentDate.format("MM/DD/YYYY h:mm A"));
+            });
         })
         .catch(function (error) {
             if (error.response) {
