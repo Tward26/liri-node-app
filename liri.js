@@ -18,31 +18,66 @@ inquirer.prompt([
         message: "What would you like to do?",
         choices: ['concert-this', 'spotify-this-song', 'movie-this', 'do-what-it-says'],
         name: "command"
-    },
-    {
-        type: "input",
-        message: "What would you like to search for?",
-        name: "choice"
     }
 ]).then(res => {
     switch (res.command) {
         case 'concert-this':
-            if (res.choice === "") {
-                res.choice = "baroness";
-            }
-            concertThis(res.choice);
+            inquirer.prompt([
+                {
+                    type: "input",
+                    message: "What band would you like to find concerts for?",
+                    name: "choice"
+                }]).then(res => {
+                    if (res.choice === "") {
+                        res.choice = "baroness";
+                    }
+                    concertThis(res.choice);
+                });
             break;
         case 'spotify-this-song':
-            spotifyThis(res.choice);
+            inquirer.prompt([
+                {
+                    type: "input",
+                    message: "What song would you like to look up?",
+                    name: "choice"
+                }]).then(res => {
+                    if (res.choice === "") {
+                        res.choice = "The Sign Ace of Base"
+                    }
+                    spotifyThis(res.choice);
+                });
             break;
         case 'movie-this':
-            if (res.choice === "") {
-                res.choice = "Mr. Nobody";
-            }
-            movieThis(res.choice);
+            inquirer.prompt([
+                {
+                    type: "input",
+                    message: "What movie would you like more information about?",
+                    name: "choice"
+                }]).then(res => {
+                    if (res.choice === "") {
+                        res.choice = "Mr. Nobody";
+                    }
+                    movieThis(res.choice);
+                });
             break;
         case 'do-what-it-says':
-            doWhatItSays(res.choice);
+            fs.readFile("./random.txt", "utf8", function (error, data) {
+                if (error) {
+                    return console.log(error);
+                }
+                const dataArray = data.split(",");
+                switch (dataArray[0]) {
+                    case 'spotifyThis':
+                        spotifyThis(dataArray[1]);
+                        break;
+                    case 'movieThis':
+                        movieThis(dataArray[1]);
+                        break;
+                    case 'concertThis':
+                        concertThis(dataArray[1]);
+                        break;
+                }
+            });
             break;
         default: return;
     }
@@ -54,7 +89,6 @@ const concertThis = choice => {
     const choiceArray = choice.split(" ");
     const choiceString = choiceArray.join('+');
     const queryUrl = "https://rest.bandsintown.com/artists/" + choiceString + "/events?app_id=codingbootcamp";
-
     axios.get(queryUrl)
         .then(function (response) {
             const data = response.data;
@@ -86,7 +120,19 @@ const concertThis = choice => {
 };
 
 const spotifyThis = choice => {
-
+    spotify
+        .search({ type: 'track', query: choice, limit: 5 })
+        .then(function (response) {
+            for (let i = 0; i < 5; i++) {
+                console.log("\nArtist: " + response.tracks.items[i].artists[0].name);
+                console.log("Song Title: " + response.tracks.items[i].name);
+                console.log("Song Preview URL: " + response.tracks.items[i].preview_url);
+                console.log("Album Title: " + response.tracks.items[i].album.name);
+            }
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
 };
 
 const movieThis = choice => {
@@ -123,9 +169,5 @@ const movieThis = choice => {
             }
             console.log(error.config);
         });
-
-};
-
-const doWhatItSays = choice => {
 
 };
