@@ -32,7 +32,7 @@ inquirer.prompt([
                         res.choice = "baroness";
                     }
                     concertThis(res.choice);
-                    fs.appendFileSync('./log.txt', `\nconcertThis(${res.choice})`);
+                    fs.appendFileSync('./log.txt', `\n\nconcertThis(${res.choice})`);
                 });
             break;
         case 'spotify-this-song':
@@ -46,7 +46,7 @@ inquirer.prompt([
                         res.choice = "The Sign Ace of Base"
                     }
                     spotifyThis(res.choice);
-                    fs.appendFileSync('./log.txt', `\nspotifyThis(${res.choice})`);
+                    fs.appendFileSync('./log.txt', `\n\nspotifyThis(${res.choice})`);
                 });
             break;
         case 'movie-this':
@@ -60,7 +60,7 @@ inquirer.prompt([
                         res.choice = "Mr. Nobody";
                     }
                     movieThis(res.choice);
-                    fs.appendFileSync('./log.txt', `\nmovieThis(${res.choice})`);
+                    fs.appendFileSync('./log.txt', `\n\nmovieThis(${res.choice})`);
                 });
             break;
         case 'do-what-it-says':
@@ -72,15 +72,15 @@ inquirer.prompt([
                 switch (dataArray[0]) {
                     case 'spotifyThis':
                         spotifyThis(dataArray[1]);
-                        fs.appendFileSync('./log.txt', `\nspotifyThis(${dataArray[1]})`);
+                        fs.appendFileSync('./log.txt', `\n\nspotifyThis(${dataArray[1]})`);
                         break;
                     case 'movieThis':
                         movieThis(dataArray[1]);
-                        fs.appendFileSync('./log.txt', `\nmovieThis(${dataArray[1]})`);
+                        fs.appendFileSync('./log.txt', `\n\nmovieThis(${dataArray[1]})`);
                         break;
                     case 'concertThis':
                         concertThis(dataArray[1]);
-                        fs.appendFileSync('./log.txt', `\nconcertThis(${dataArray[1]})`);
+                        fs.appendFileSync('./log.txt', `\n\nconcertThis(${dataArray[1]})`);
                         break;
                 }
             });
@@ -103,6 +103,8 @@ const concertThis = choice => {
                 console.log("Venue Location: " + ele.venue.city + ", " + ele.venue.region + ", " + ele.venue.country);
                 const momentDate = moment(ele.datetime);
                 console.log("Date: " + momentDate.format("MM/DD/YYYY h:mm A"));
+                const text = `\n\nVenue Name: ${ele.venue.name}\nVenue Location: ${ele.venue.city}, ${ele.venue.region}, ${ele.venue.country}\nDate: ${momentDate.format("MM/DD/YYYY h:mm A")}`;
+                fs.appendFileSync('./log.txt', text);
             });
         })
         .catch(function (error) {
@@ -134,6 +136,8 @@ const spotifyThis = choice => {
                 console.log("Song Title: " + response.tracks.items[i].name);
                 console.log("Song Preview URL: " + response.tracks.items[i].preview_url);
                 console.log("Album Title: " + response.tracks.items[i].album.name);
+                const text = `\n\nArtist: ${response.tracks.items[i].artists[0].name}\nSong Title: ${response.tracks.items[i].name}\nSong Preview URL: ${response.tracks.items[i].preview_url}\nAlbum title: ${response.tracks.items[i].album.name}`;
+                fs.appendFileSync('./log.txt', text);
             }
         })
         .catch(function (err) {
@@ -156,6 +160,8 @@ const movieThis = choice => {
             console.log("Language: " + response.data.Language);
             console.log("Plot Summary: " + response.data.Plot);
             console.log("Actors: " + response.data.Actors);
+            const text = `\n\nTitle: ${response.data.Title}\nYear Released: ${response.data.Year}\nIMDB Rating: ${response.data.imdbRating}\nRotten Tomatoes Rating: ${response.data.Ratings[1].Value}\nProduction Country: ${response.data.Country}\nLanguage: ${response.data.Language}\nPlot Summary: ${response.data.Plot}\nActors: ${response.data.Actors}`;
+            fs.appendFileSync('./log.txt', text);
 
         })
         .catch(function (error) {
