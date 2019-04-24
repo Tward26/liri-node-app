@@ -127,6 +127,8 @@ const concertThis = choice => {
 
 };
 
+//Spotify axios call
+
 const spotifyThis = choice => {
     spotify
         .search({ type: 'track', query: choice, limit: 5 })
@@ -144,6 +146,8 @@ const spotifyThis = choice => {
             console.log(err);
         });
 };
+
+//OMDB axios call
 
 const movieThis = choice => {
     const choiceArray = choice.split(" ");
