@@ -32,6 +32,7 @@ inquirer.prompt([
                         res.choice = "baroness";
                     }
                     concertThis(res.choice);
+                    fs.appendFileSync('./log.txt', `\nconcertThis(${res.choice})`);
                 });
             break;
         case 'spotify-this-song':
@@ -45,6 +46,7 @@ inquirer.prompt([
                         res.choice = "The Sign Ace of Base"
                     }
                     spotifyThis(res.choice);
+                    fs.appendFileSync('./log.txt', `\nspotifyThis(${res.choice})`);
                 });
             break;
         case 'movie-this':
@@ -58,6 +60,7 @@ inquirer.prompt([
                         res.choice = "Mr. Nobody";
                     }
                     movieThis(res.choice);
+                    fs.appendFileSync('./log.txt', `\nmovieThis(${res.choice})`);
                 });
             break;
         case 'do-what-it-says':
@@ -69,12 +72,15 @@ inquirer.prompt([
                 switch (dataArray[0]) {
                     case 'spotifyThis':
                         spotifyThis(dataArray[1]);
+                        fs.appendFileSync('./log.txt', `\nspotifyThis(${dataArray[1]})`);
                         break;
                     case 'movieThis':
                         movieThis(dataArray[1]);
+                        fs.appendFileSync('./log.txt', `\nmovieThis(${dataArray[1]})`);
                         break;
                     case 'concertThis':
                         concertThis(dataArray[1]);
+                        fs.appendFileSync('./log.txt', `\nconcertThis(${dataArray[1]})`);
                         break;
                 }
             });
@@ -123,7 +129,7 @@ const spotifyThis = choice => {
     spotify
         .search({ type: 'track', query: choice, limit: 5 })
         .then(function (response) {
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < response.tracks.items.length; i++) {
                 console.log("\nArtist: " + response.tracks.items[i].artists[0].name);
                 console.log("Song Title: " + response.tracks.items[i].name);
                 console.log("Song Preview URL: " + response.tracks.items[i].preview_url);
