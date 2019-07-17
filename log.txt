@@ -422,3 +422,205 @@ Artist: Mick Jensen
 Song Title: I Want It That Way
 Song Preview URL: https://p.scdn.co/mp3-preview/f8181f66713983fab073e133e23c741acbe00d75?cid=4c7e18ab2d4945889983f0bf47675083
 Album title: I Want It That Way
+
+concertThis(The National)
+
+Venue Name: The Orpheum Theatre
+Venue Location: Los Angeles, CA, United States
+Date: 04/26/2019 8:00 PM
+
+Venue Name: Mann Center for the Performing Arts
+Venue Location: Philadelphia, PA, United States
+Date: 06/11/2019 7:00 PM
+
+Venue Name: BRIC Celebrate Brooklyn! Festival at Prospect Park Bandshell
+Venue Location: Brooklyn, NY, United States
+Date: 06/12/2019 7:00 PM
+
+Venue Name: Prospect Park Bandshell
+Venue Location: Brooklyn, NY, United States
+Date: 06/13/2019 7:00 PM
+
+Venue Name: Coca-Cola Roxy
+Venue Location: Atlanta, GA, United States
+Date: 06/16/2019 7:00 PM
+
+Venue Name: St. Augustine Amphitheatre
+Venue Location: St. Augustine, FL, United States
+Date: 06/17/2019 7:00 PM
+
+Venue Name: The Anthem
+Venue Location: Washington, DC, United States
+Date: 06/19/2019 7:00 PM
+
+Venue Name: Thompson's Point
+Venue Location: Portland, ME, United States
+Date: 06/20/2019 7:00 PM
+
+Venue Name: Place des Arts
+Venue Location: Montreal, , Canada
+Date: 06/21/2019 7:00 PM
+
+Venue Name: Pier 8
+Venue Location: Hamilton, , Canada
+Date: 06/22/2019 7:00 PM
+
+Venue Name: Express Live!
+Venue Location: Columbus, OH, United States
+Date: 06/24/2019 7:00 PM
+
+Venue Name: Hill Auditorium
+Venue Location: Ann Arbor, MI, United States
+Date: 06/25/2019 7:00 PM
+
+Venue Name: Farm Bureau Insurance Lawn at White River State Park
+Venue Location: Indianapolis, IN, United States
+Date: 06/26/2019 7:00 PM
+
+Venue Name: Huntington Bank Pavilion at Northerly Island
+Venue Location: Chicago, IL, United States
+Date: 06/28/2019 7:00 PM
+
+Venue Name: American Family Insurance Amphitheater
+Venue Location: Milwaukee, WI, United States
+Date: 06/30/2019 7:30 PM
+
+Venue Name: Hyde Park
+Venue Location: London, , United Kingdom
+Date: 07/05/2019 7:00 PM
+
+Venue Name: Castlefield Bowl
+Venue Location: Manchester, , United Kingdom
+Date: 07/06/2019 7:00 PM
+
+Venue Name: Castlefield Bowl
+Venue Location: Manchester, , United Kingdom
+Date: 07/10/2019 6:00 PM
+
+Venue Name: Espacio Mad Cool
+Venue Location: Madrid, , Spain
+Date: 07/11/2019 7:00 PM
+
+Venue Name: Hyde Park
+Venue Location: London, , United Kingdom
+Date: 07/13/2019 7:00 PM
+
+Venue Name: Jahrhunderthalle
+Venue Location: Frankfurt Am Main, , Germany
+Date: 07/15/2019 6:30 PM
+
+Venue Name: Stadtpark Freilichtbühne
+Venue Location: Hamburg-nord, , Germany
+Date: 07/16/2019 7:00 PM
+
+Venue Name: Curraghmore House
+Venue Location: Portlaw, , Ireland
+Date: 08/02/2019 7:00 PM
+
+Venue Name: Kelvingrove Bandstand
+Venue Location: Glasgow, , United Kingdom
+Date: 08/06/2019 6:30 PM
+
+Venue Name: Kelvingrove Bandstand
+Venue Location: Glasgow, , United Kingdom
+Date: 08/07/2019 6:30 PM
+
+Venue Name: Domeniul Ştirbey
+Venue Location: Buftea, , Romania
+Date: 08/09/2019 7:00 PM
+
+Venue Name: Domeniul Ştirbey
+Venue Location: Buftea, , Romania
+Date: 08/10/2019 7:00 PM
+
+Venue Name: Domeniul Stirbey
+Venue Location: Buftea, , Romania
+Date: 08/11/2019 12:00 PM
+
+Venue Name: Praia do Taboão
+Venue Location: Paredes De Coura, , Portugal
+Date: 08/14/2019 7:00 PM
+
+Venue Name: Walibi Holland
+Venue Location: Biddinghuizen, , Netherlands
+Date: 08/16/2019 7:00 PM
+
+Venue Name: Festival Lawn at Deer Lake Park
+Venue Location: Burnaby, , Canada
+Date: 08/28/2019 7:00 PM
+
+Venue Name: King County’s Marymoor Park
+Venue Location: Redmond, WA, United States
+Date: 08/29/2019 7:00 PM
+
+Venue Name: Edgefield
+Venue Location: Troutdale, OR, United States
+Date: 08/30/2019 7:00 PM
+
+Venue Name: Frost Amphitheater
+Venue Location: Stanford, CA, United States
+Date: 09/01/2019 7:00 PM
+
+Venue Name: Greek Theatre
+Venue Location: Los Angeles, CA, United States
+Date: 09/02/2019 7:00 PM
+
+Venue Name: Comerica Theatre
+Venue Location: Phoenix, AZ, United States
+Date: 09/03/2019 7:00 PM
+
+Venue Name: Ogden Ampitheater
+Venue Location: Ogden, UT, United States
+Date: 09/05/2019 7:00 PM
+
+Venue Name: The Mission Ballroom
+Venue Location: Denver, CO, United States
+Date: 09/06/2019 7:00 PM
+
+Venue Name: The Mission Ballroom
+Venue Location: Denver, CO, United States
+Date: 09/07/2019 7:00 PM
+
+Venue Name: Santa Fe Opera House
+Venue Location: Santa Fe, NM, United States
+Date: 09/08/2019 7:00 PM
+
+Venue Name: Austin360 Amphitheater
+Venue Location: Austin, TX, United States
+Date: 09/10/2019 7:00 PM
+
+Venue Name: White Oak Music Hall
+Venue Location: Houston, TX, United States
+Date: 09/11/2019 7:00 PM
+
+Venue Name: Columbiahalle
+Venue Location: Berlin, , Germany
+Date: 11/26/2019 8:00 PM
+
+Venue Name: Columbiahalle
+Venue Location: Berlin, , Germany
+Date: 11/27/2019 8:00 PM
+
+Venue Name: Royal Arena
+Venue Location: København S, , Denmark
+Date: 11/29/2019 8:00 PM
+
+Venue Name: RuhrCongress Bochum
+Venue Location: Bochum, , Germany
+Date: 12/01/2019 8:00 PM
+
+Venue Name: Palladium
+Venue Location: Köln, , Germany
+Date: 12/02/2019 8:00 PM
+
+Venue Name: Samsung Hall Zürich
+Venue Location: Zürich, , Switzerland
+Date: 12/03/2019 8:00 PM
+
+Venue Name: Zenith - The Cultural Hall
+Venue Location: München, , Germany
+Date: 12/04/2019 8:00 PM
+
+Venue Name: Porsche Arena
+Venue Location: Stuttgart, , Germany
+Date: 12/05/2019 8:00 PM
